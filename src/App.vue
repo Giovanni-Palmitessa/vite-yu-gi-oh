@@ -3,8 +3,14 @@ import AppHeader from "./components/AppHeader.vue";
 import AppSearch from "./components/AppSearch.vue";
 import AppCounter from "./components/AppCounter.vue";
 import axios from "axios";
+import { store } from "./store";
 
 export default {
+  data() {
+    return {
+      store,
+    };
+  },
   components: {
     AppHeader,
     AppSearch,
