@@ -26,5 +26,6 @@ export default {
 .card-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 </style>
