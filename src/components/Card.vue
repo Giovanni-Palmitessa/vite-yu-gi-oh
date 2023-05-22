@@ -17,7 +17,7 @@ export default {
 .card {
   width: calc((100% - 4rem) / 5);
   border: 1px solid brown;
-  background-color: bisque;
+  background-color: cornsilk;
   img {
     width: 100%;
   }

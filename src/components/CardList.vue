@@ -28,5 +28,6 @@ export default {
   flex-wrap: wrap;
   gap: 1rem;
   background-color: azure;
+  margin-top: 1rem;
 }
 </style>
