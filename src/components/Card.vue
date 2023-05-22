@@ -24,6 +24,13 @@ export default {
   h2 {
     font-size: 1rem;
     text-align: center;
+    color: cornflowerblue;
+  }
+  .type {
+    text-align: center;
+    font-size: 0.9rem;
+    padding-top: 0.7rem;
+    color: darkblue;
   }
 }
 </style>
