@@ -2,7 +2,7 @@
 export default {};
 </script>
 <template>
-  <div class="search">
+  <div class="container">
     <select name="species" id="species">
       <option value="alien">Alien</option>
       <option value="alien">Alien</option>

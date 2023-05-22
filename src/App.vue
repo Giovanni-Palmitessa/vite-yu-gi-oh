@@ -19,4 +19,9 @@ export default {
 
 <style lang="scss">
 @use "./assets/styles/general.scss" as *;
+
+main {
+  padding: 1.5rem;
+  background-color: darkcyan;
+}
 </style>
