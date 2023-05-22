@@ -2,12 +2,18 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppSearch from "./components/AppSearch.vue";
 import AppCounter from "./components/AppCounter.vue";
+import axios from "axios";
 
 export default {
   components: {
     AppHeader,
     AppSearch,
     AppCounter,
+  },
+  created() {
+    axios
+      .get("https://db.ygoprodeck.com/api/v7/cardinfo.php")
+      .then((response) => (this.store.characterList = response.data.results));
   },
 };
 </script>
