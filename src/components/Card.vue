@@ -7,7 +7,7 @@ export default {
 </script>
 <template>
   <div class="card">
-    <img :src="cardData.card_images.image_url" :alt="cardData.name" />
+    <img :src="cardData.card_images[0].image_url" :alt="cardData.name" />
     <h2>{{ cardData.name }}</h2>
     <div class="type">{{ cardData.archetype }}</div>
   </div>
@@ -19,6 +19,9 @@ export default {
   border: 1px solid brown;
   img {
     width: 100%;
+  }
+  h2 {
+    font-size: 0.7rem;
   }
 }
 </style>
