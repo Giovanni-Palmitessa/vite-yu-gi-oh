@@ -38,7 +38,7 @@ export default {
 <template>
   <AppHeader />
   <main>
-    <AppSearch />
+    <AppSearch @performSearch="requestDataFromApi" />
     <AppCounter />
     <CardList />
   </main>
