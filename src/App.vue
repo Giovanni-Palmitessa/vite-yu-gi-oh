@@ -20,14 +20,13 @@ export default {
   },
   methods: {
     requestDataFromApi() {
-      axios.get(
-        "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0"
-      ),
-        {
+      axios
+        .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0", {
           params: {
             archetype_name: this.store.searchArchetype,
           },
-        }.then((response) => (this.store.cardList = response.data.data));
+        })
+        .then((response) => (this.store.cardList = response.data.data));
     },
   },
   created() {
