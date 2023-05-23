@@ -6,6 +6,11 @@ export default {
       store,
     };
   },
+  methods: {
+    emitSearchEvent() {
+      this.$emit("performSearch");
+    },
+  },
 };
 </script>
 <template>
