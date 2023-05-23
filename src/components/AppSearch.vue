@@ -24,10 +24,10 @@ export default {
       <option value="">Seleziona Archetype</option>
       <option
         v-for="archetype in store.archetypeList"
-        :key="archetype.id"
-        :value="archetype"
+        :key="archetype.archetype_name"
+        :value="archetype.archetype_name"
       >
-        {{ archetype }}
+        {{ archetype.archetype_name }}
       </option>
     </select>
   </div>
