@@ -18,10 +18,20 @@ export default {
     AppCounter,
     CardList,
   },
+  methods: {
+    requestDataFromApi() {
+      axios.get(
+        "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0"
+      ),
+        {
+          params: {
+            archetype_name: this.store.searchArchetype,
+          },
+        }.then((response) => (this.store.cardList = response.data.data));
+    },
+  },
   created() {
-    axios
-      .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0")
-      .then((response) => (this.store.cardList = response.data.data));
+    this.requestDataFromApi();
   },
 };
 </script>
