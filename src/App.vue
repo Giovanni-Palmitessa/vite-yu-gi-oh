@@ -21,10 +21,8 @@ export default {
   methods: {
     requestDataFromApi() {
       axios
-        .get("https://db.ygoprodeck.com/api/v7/cardinfo.php", {
+        .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0", {
           params: {
-            num: 20,
-            offset: 0,
             archetype: this.store.searchArchetype,
           },
         })
