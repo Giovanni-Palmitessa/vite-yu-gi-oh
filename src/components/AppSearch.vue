@@ -22,7 +22,13 @@ export default {
       id="species"
     >
       <option value="">Seleziona Archetype</option>
-      <option value="alien">Alien</option>
+      <option
+        v-for="archetype in store.archetypeList"
+        :key="archetype.id"
+        :value="archetype"
+      >
+        {{ archetype }}
+      </option>
     </select>
   </div>
 </template>

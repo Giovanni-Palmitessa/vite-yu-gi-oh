@@ -30,11 +30,25 @@ export default {
         })
         .then((response) => (this.store.cardList = response.data.data));
     },
+
+    getArchetypes() {
+      axios
+        .get("https://db.ygoprodeck.com/api/v7/cardinfo.php", {
+          params: {
+            num: 20,
+            offset: 0,
+            archetype: this.store.searchArchetype,
+          },
+        })
+        .then((response) => (this.store.archetypeList = response.data.data));
+    },
   },
   created() {
     axios
       .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0")
       .then((response) => (this.store.cardList = response.data.data));
+
+    this.getArchetypes();
   },
 };
 </script>
